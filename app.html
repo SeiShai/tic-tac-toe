@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="background">
+    <main class="elements-container">
+        <h1 class="game-name">Tic Tac Toe!</h1>
+        <div id="game-container">
+            <div class="rotating-icon left">
+                <span class="icon">O</span>
+            </div>
+            <div id="game-board">
+                <div class="cell" id="cell-0"></div>
+                <div class="cell" id="cell-1"></div>
+                <div class="cell" id="cell-2"></div>
+                <div class="cell" id="cell-3"></div>
+                <div class="cell" id="cell-4"></div>
+                <div class="cell" id="cell-5"></div>
+                <div class="cell" id="cell-6"></div>
+                <div class="cell" id="cell-7"></div>
+                <div class="cell" id="cell-8"></div>
+            </div>
+            <div class="rotating-icon right">
+                <span class="icon">X</span>
+            </div>
+            <div id="game-info">
+                <h2 id="player-turn">Player X's turn</h2>
+                <h2 id="game-status">In Progress</h2>
+                <button id="restart-button">Restart Game</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

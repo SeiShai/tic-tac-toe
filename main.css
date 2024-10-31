@@ -1,0 +1,160 @@
+body, html {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    background: linear-gradient(246deg, #D23232 -30.53%, #393980 108.37%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rotating-icon {
+    position: absolute;
+    font-size: 800px;
+    color: rgba(255, 255, 255, 0.7);
+    perspective: 400px;
+}
+
+.left {
+    left: -10%;
+    top: 2%;
+    animation: rotate-left 4s linear infinite;
+}
+
+.right {
+    right: -10%;
+    bottom: 10%;
+    animation: rotate-right 4s linear infinite;
+}
+
+.icon {
+    display: inline-block;
+}
+
+@keyframes rotate-left {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    50% {
+        transform: rotateY(-360deg) rotateX(60deg);
+    }
+    100% {
+        transform: rotateY(-720deg) rotateX(0deg);
+    }
+}
+
+@keyframes rotate-right {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    50% {
+        transform: rotateY(360deg) rotateX(60deg);
+    }
+    100% {
+        transform: rotateY(720deg) rotateX(0deg);
+    }
+}
+
+#text-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game-name {
+    color: #FFF;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    background: #C5567D;
+    border-radius: 49px;
+    border: 2px solid #FFF;
+    color: #FFF;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: #FFF; /* Text color for X and O */
+    font-size: 48px; /* Font size for X and O */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 10%);
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#player-turn {
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+#game-status {
+    color: #FFF;
+    font-size: 30px;
+    margin-top: 20px;
+    justify-self: center;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    background: #C5567D;
+    border-radius: 49px;
+    border: 2px solid #FFF;
+    color: #FFF;
+}
